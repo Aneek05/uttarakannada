@@ -1,7 +1,11 @@
 {
-  "name": "uttara-kannada-tourism",
-  "version": "0.1.0",
+  "name": "uttarakannada",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
   "dependencies": {
     "autoprefixer": "^10.4.7",
     "framer-motion": "^12.7.4",
@@ -11,17 +15,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
-    "react-image-lightbox": "^5.1.1",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "^3.4.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "npm install --legacy-peer-deps && react-scripts build
+    "tailwindcss": "^3.4.1",
+    "yet-another-react-lightbox": "^3.23.0"
   },
   "browserslist": {
     "production": [
