@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const tabs = {
   Nature: "/videos/nature.mp4",
@@ -9,18 +9,34 @@ const tabs = {
 
 const HeroTabs = () => {
   const [selected, setSelected] = useState("Nature");
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        const playPromise = videoRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((err) => console.warn("Autoplay blocked:", err));
+        }
+      }
+    };
+
+    playVideo();
+  }, [selected]);
 
   return (
     <section id="home" className="relative w-full h-screen text-white overflow-hidden">
       <video
+        ref={videoRef}
         src={tabs[selected]}
         autoPlay
         muted
         loop
+        playsInline
         className="absolute w-full h-full object-cover z-0"
       />
       <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center z-10 px-4">
-	<h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome To Uttara Kannada Tourism</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome To Uttara Kannada Tourism</h1>
         <h1 className="text-4xl md:text-6xl font-bold mb-6">Explore {selected}</h1>
         <div className="flex flex-wrap justify-center gap-4">
           {Object.keys(tabs).map((tab) => (
