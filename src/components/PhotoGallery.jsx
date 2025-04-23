@@ -5,6 +5,7 @@ import "yet-another-react-lightbox/styles.css";
 import img1 from "../assets/gallery/img1.jpg";
 import img2 from "../assets/gallery/img2.jpg";
 import img3 from "../assets/gallery/img3.jpg";
+import img4 from "../assets/gallery/img4.jpg";
 
 const images = [img1, img2, img3].map(src => ({ src }));
 
