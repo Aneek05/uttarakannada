@@ -14,7 +14,7 @@ const PhotoGallery = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <section id="gallery" className="py-16 px-6 bg-[#244e38] text-white">
+    <section id="gallery" className="py-16 px-6 text-white">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold mb-2">Traveler Photo Gallery</h2>
         <p className="text-gray-200">Captured by explorers across Uttara Kannada</p>

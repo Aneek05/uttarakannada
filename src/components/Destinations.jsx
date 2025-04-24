@@ -33,7 +33,7 @@ const FeaturedDestinations = () => {
   };
 
   return (
-    <section id="destinations" className="py-20 px-6 text-white bg-[#244e38]">
+    <section id="destinations" className="py-20 px-6 text-white">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold">Top Destinations</h2>
         <p className="text-gray-300 mt-2">Discover the most iconic places in Uttara Kannada</p>
